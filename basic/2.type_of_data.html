@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <script>
+        let str ="안녕하세요"; //문자열데이터(string)
+        let num = 123;        //숫자형에티터(number 또는 numeric data)
+        let bln = true;       // 논리형데이터(boolean) true, false 
+                                // 연산오류 NaN(Not a Number)
+        let non = null;       //null data(빈값)
+        let non2;             //undefined
+        
+
+        console.log(str, num, bln, non, non2);
+        // console.log(non2, non3);   //오류를 확인하라.
+
+        // 데이터의 형(type) 변환, 무조건 되지는 않는다. 자주하면 좋지않다.
+        let data1 ='123';
+        // 형태검사
+        // 함수 typeof() 데이터으 형태를 검사한 다음 결과값을 반환한다.
+        console.log(typeof(data1)) ;
+
+        data1 = Number(data1);   // 넘버함수는 바꿀 수 있는 숫자스트링만 가능하다. 만약 순수문자를 넣으면 NaN을 반환
+        console.log(typeof data1);
+
+
+    </script>    
+</body>
+
+
+
+</html>

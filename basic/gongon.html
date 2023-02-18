@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var xhr = new XMLHttpRequest();
+        var url = 'http://apis.data.go.kr/1611000/nsdi/LandUseService/wms/getLandUseWMS'; /*URL*/
+        var queryParams = '?' + encodeURIComponent('serviceKey') + '='+'서비스키'; /*Service Key*/
+            queryParams += '&' + encodeURIComponent('layers') + '=' + encodeURIComponent('176'); /**/
+            queryParams += '&' + encodeURIComponent('crs') + '=' + encodeURIComponent('EPSG:5174'); /**/
+            queryParams += '&' + encodeURIComponent('bbox') + '=' + encodeURIComponent('217365,447511,217636,447701'); /**/
+            queryParams += '&' + encodeURIComponent('width') + '=' + encodeURIComponent('915'); /**/
+            queryParams += '&' + encodeURIComponent('height') + '=' + encodeURIComponent('700'); /**/
+            queryParams += '&' + encodeURIComponent('format') + '=' + encodeURIComponent('image/png'); /**/
+            queryParams += '&' + encodeURIComponent('transparent') + '=' + encodeURIComponent('false'); /**/
+            queryParams += '&' + encodeURIComponent('bgcolor') + '=' + encodeURIComponent('0xFFFFFF'); /**/
+            queryParams += '&' + encodeURIComponent('exceptions') + '=' + encodeURIComponent('blank'); /**/
+        xhr.open('GET', url + queryParams);
+        xhr.onreadystatechange = function () {
+            if (this.readyState == 4) {
+                alert('Status: '+this.status+'nHeaders: '+JSON.stringify(this.getAllResponseHeaders())+'nBody: '+this.responseText);
+            }
+        };
+
+        xhr.send('');
+    </script>
+</body>
+</html>

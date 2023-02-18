@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //나이입력 65세이상 50%할인
+        //7세이하 무료입장
+        //13세 이하면 30%g할인
+        //그외 정상요금
+
+        // let age = prompt('나이를 입력해주세요')
+        // let pay = 10000
+
+        // if(age >= 65) {
+        //     alert(`입장료는 ${pay*0.5}원 입니다.`);
+        //     }
+        // else if(age <= 7) {
+        //     alert(`무료입장 대상자입니다.`);
+        //     }
+        // else if(age <= 13) { 
+        //     alert(`입장료는 ${pay*0.3}원 입니다.`);
+        //     }     
+        // else{
+        //     alert(`입장료는 ${pay}원 입니다.`);
+        //     }
+
+        /*
+        1. 순서를 잘 지켜야한다. 중간에 빠져나와버린다.
+        2. else if 없이 if만 사용하면 논리를 알기 어려워진다. 실행은 됨    
+        */
+
+        
+        
+        /*
+        confirm(정말삭제?
+        예 비빌번호 입력
+        맞으면 삭제되었습니다.
+        아니오. 삭제가 취소되었습니다.)
+        */
+        // let reaction = confirm('정말 삭제하시겠습니까?');  // 반환하는 값 True of false
+        // let pw;
+        // if(reaction === true){
+        //     pw = prompt('비밀번호를 입력해주세요');
+        //     if(pw == 1111) {
+        //         alert('삭제되었습니다.');
+        //         }
+        //     else{alert('비밀번호를 확인해주세요');
+        //         }
+        //     }
+        // else{alert('취소되었습니다.');
+        //     }
+
+
+
+
+
+
+        /*
+        키와 몸무게 입력
+        키를 토대로 표준체중을 산정한 다음
+         표준체중= (키-10)*0.9
+         몸무게 20%초과 : 과체중입니다.
+         몸무게 20%미만 : 저체중입니다.
+         10%미만 미용체중입니다.
+         그외 정상체중
+        */
+
+
+        let height ;
+        let weight ;
+
+        height = prompt('키를 입력해주세요(단위: Cm)') ;
+        weight = prompt('몸무게를 입력해주세요(단위: kg)') ;
+        let std = (height - 100) * 0.9 ;
+        let UpperStd = std * 1.2 ;
+        let LowerStd = std * 0.8 ;
+        let Beautyful = std * 0.9 ;
+
+
+        if(weight > UpperStd) {
+            alert(`과체중입니다. 감량목표는 -${weight-std}`) ;
+        }
+        else if(weight < LowerStd) {
+            alert(`저체중입니다. 증량목표는 +${std-weight}`) ;
+        }
+        else if(Beautyful < weight) {
+            alert('미용체중입니다.') ;
+        }
+        else{
+            alert('정상체중입니다.') ;
+        }
+        
+    </script>
+</body>
+</html>

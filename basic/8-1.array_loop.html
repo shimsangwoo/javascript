@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+
+    
+    <script>
+    // 배열의 순회
+    // let favFru =['사과','배','수박','망고','바나나','복숭아','참외']
+    // for (let i=0 ; i<5; i++) {
+    //     console.log(favFru[i]);
+    // }
+    
+    let $boxes = document.querySelectorAll('div'); // 코드가 길어서 변수에 저장함
+        // 선택자 잡아주는 변수앞에는 $(달러)를 집어 넣는 경우가 많음. 데이터와 구분하기 위함
+    console.log($boxes);  //array_like(유사배열), 배열메소드가 먹히기도 안먹히기도 함
+    let colors = ['red','green','purple','blue','yellow']
+
+
+    //for in 구문
+    for(i in $boxes) {
+        console.log(i);
+    }
+    
+    //for of 구문
+    for(i of $boxes) {
+        console.log(i);
+    }
+
+    $boxes.forEach(function(box, i) {
+        box.style.height ='300px';
+        box.style.backgroundColor = colors[i];
+    })
+    for(let i =0 ; i < $boxes.length; i++) {
+        $boxes[i].style.height = '300px';
+        $boxes[i].style.backgroundColor = colors[i];
+    }
+
+
+    // javascript에서 선택자
+    //1. querySelector : 단수
+    //  querySelectorAll : 복수
+    // CSS 선택자와 유사, 선택자가 적을 때
+    //2. getElement(s)By
+    // 성능이 좋음(빠름, 호환성 좋음), 선택자가 많을 때, 개발자들이 좋아함
+    
+
+    // 최신문법들
+    // 1. .forEach();
+    let ex1 = [1,2,3,4,5];
+    ex1.forEach(function(i, j){
+        console.log(i, j)
+    });
+
+
+    // 2. .map();  계산만 하고 끝내지 않고, 마지막에 리턴
+
+    let fri = ['철구', '영희', '바둑이']
+
+    let result = fri.map(function(item, i){
+        return item + "야 안녕?";
+    })
+    </script>
+    
+</body>
+</html>

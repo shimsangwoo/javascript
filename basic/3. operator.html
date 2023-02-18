@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+    <script>
+        //연산자operator
+        //이항산술연산 +-*/ % 사칙연산이 아니다. 총5개
+        let a = 100;
+        let b = 200;
+        console.log(a+b);
+
+        let c = 5;
+        let d = 3;
+        console.log(c%d);
+
+        let e = "동해물과";
+        let f = " 백두산이";
+        console.log(e+f);
+
+        let g = 123;
+        let h = "456";
+        console.log(g+h);   //암시적(묵시적) 형 변환/ 앞의 숫자를 묵시적으로 스트링으로 바꾸어버린다./ 엄격하지 않는 언어이다.
+
+        let 변수_1 = 123;
+        let 변수_2 = "456";
+        console.log(변수_1*변수_2);   //암시적(묵시적) 형 변환/ 앞의 숫자를 묵시적으로 스트링으로 바꾸어버린다./ 엄격하지 않는 언어이다.
+
+
+        // 단항산술연산자(증가/감소연산자)
+        //++   --
+
+        let num_1 = 100;
+        num_1++ ;
+        console.log(num_1);
+        
+        let num_2 = 100;
+        console.log(num_2++); //연산순서가 뒤로 밀린다.
+        // 후위연산자, 전위연산자
+        // 3 + 3 * 2
+
+        let num_3 = 100;
+        console.log(++num_3); //안밀리는 방법
+        // 후위연산자, 전위연산자
+        // 3 + 3 * 2
+
+        // 대입연산자(할당연산자) / 파이선과 비슷하다.
+        // +=  -= *= /= %=
+        
+        let num_4 = 1000;
+        num_4 += 100;
+        console.log(num_4);
+
+        ////////////////////////
+
+
+        
+        // (동등)비교연산자====> 논리값으로 반환한다.
+        // = : 할당하기
+        // == : 값이 같다.
+        // === : 값과 데이타의 형태까지 모두 같다.(좀 더 안정적이고 엄격하다.)
+        // ! : 부정을 의미
+        // != : 값이 다르다
+        // !== : 값과 데이터타입이 모두 다름
+
+
+        let num_a = 123;
+        let num_b = 123;
+        console.log(num_a == num_b)
+
+        let num_c = 123;
+        let num_d = "123";
+        console.log(num_c == num_d)   //이런경우 참이 된다. 헷갈림
+
+        let num_e = 123;
+        let num_f = "123";
+        console.log(num_e === num_f)   //data type까지 검토
+        
+        let num_x = 123;
+        let num_y = "123";
+        console.log(num_x === num_y)   //data type까지 검토
+
+
+        // (대소)비교연산자====> 논리값으로 반환한다.
+        // <= 이퀄이 뒤에 와야한다.
+        let num_g = 200;
+        let num_h = 300;
+        let num_i = 400;
+        console.log(num_g < num_h < num_i);
+        // 삼항비교는 가능한 한 하지마라.
+
+
+        // 논리연산자
+        //  || : 거나, ~ 또는 논리합
+        //  && : 이면서, 이고   논리곱
+
+        var classA = prompt('A과목의 점수를 입력하세요');
+        var classB = prompt('B과목의 점수를 입력하세요');
+        var result = (classA > 70) || (classB >70);
+        console.log(`로그인결과는 :${result}`);
+        console.log(num_g < num_h && num_h < num_i) ;
+
+    </script>
+
+</body>
+
+
+
+</html>

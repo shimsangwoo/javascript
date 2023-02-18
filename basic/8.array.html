@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //배열(array) : 여러개의 데이터를 순서로 관리하는 방법
+        let friends = ['철수', '영희', '바둑이','나비'];
+        
+        // 마지막에 데이터 삽입
+        friends.push('귀동이');
+                
+        // 배열데이터의 업로드
+        friends[3] = '네코';
+
+        // 배열데이터 삭제(stack 자료임 원칙은 마지막에 넣고 마지막에 뺀다.) 반대는 큐
+        friends.pop()
+
+        //스플라이스(어디서부터, 몇개를, 뭘로) : 삭제, 업데잇
+        friends.splice(0, 3, '개똥이')
+        
+        //중요한 메서드 : ForEach, reduce, map,
+        
+        console.log(friends);
+
+
+
+        // let friends = [['철수', '영희'], ['바둑이','나비']];
+        // console.log(friends)
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let ab = new Array;
+        // let ad = new String ;
+        // console.log(ab);
+        // console.log(now)
+
+        let now = new Date();
+        let year = now.getFullYear();
+        let month = now.getMonth();
+        let _date = now.getDay();
+        let day = now.getDate();
+        let hour = now.getHours();
+        let min = now.getMinutes();
+        let sec = now.getSeconds();
+        
+        const calWeek1 = ['일', '월', '화', '수', '목', '금', '토'];
+        let calWeek2 = calWeek1[_date];
+        // console.log(calWeek2)
+
+
+
+        //시분초가 한자리수면 두자리수로
+        //24시간은 12시간으로 
+
+        ////////////////////오전 오후로 시간 나누기(12시간 system)
+        let AMPM ;
+        if(hour<12){
+            AMPM = `AM${hour}`;}
+        else{
+            AMPM = `PM${hour-12}`;}
+        // console.log(AMPM);
+        
+        //////////////////// 분초 00 두자릿수 기준으로 변경
+        let min00;
+        if(min<10){
+            min00 = `0${min}`;}
+        else{min00 = `${min}`;}
+
+        let sec00;
+        if(sec<10){
+            sec00 = `0${sec}`;}
+        else{sec00 = `${sec}`;}
+
+        console.log(year, month, _date, hour, min, sec);
+        document.write(
+            `${year}년 ${month+1}월 ${day}일 ${calWeek2}요일 ${AMPM}시 ${min00}분 ${sec00}초`
+            );
+
+        
+    </script>
+</body>
+</html>
