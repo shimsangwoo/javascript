@@ -1,6 +1,6 @@
 // console.log('hello');
 const bg = ['orange', 'blue', 'red', 'black', 'yellow', 'green']
-const hex = [0, 1, 2, 3, 4, 5, , 6, 7, 8, a, b, c, d, e, f]
+const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, a, b, c, d, e, f]
 const hexBtn = document.getElementById('hexBtn')
 const bgBtn = document.getElementById('gbBtn')
 const color = document.querySelector('.color')
