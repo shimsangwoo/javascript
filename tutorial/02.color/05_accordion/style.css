@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+}
+
+h1 {
+  text-align: center;
+  margin: 30px;
+}
+
+.accordion {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.content {
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+.content h2 {
+  padding: 16px;
+  background-color: #222;
+  color: #fff;
+  position: relative; /*자식영역이 움직일 수 있다. 이게 없으면 body를 기준으로 잡힌다.*/
+  cursor: pointer;
+}
+
+/* 수도 클래스 사용*/
+.content h2::before {
+  content: 'aaa';
+}
+
+.content h2::after {
+  content: '+';
+  position: absolute;
+  top: 10px;
+  right: 16px;
+}
+
+.content.active h2::after {
+  content: '-';
+}
+.content .text {
+  padding: 0 20px;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.content.active .text {
+  padding: 10px 20px;
+  height: 140px;
+  overflow: hidden;
+}
