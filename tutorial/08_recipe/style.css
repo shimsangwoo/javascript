@@ -17,5 +17,34 @@ body {
 .container {
   width: 90%;
   max-width: 1200px;
-  margin: 0px;
+  margin: 0px; auto;
 }
+
+.food_list{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 50px;
+}
+
+
+.food_list img{
+  width: 100%;
+  display: block;
+}
+
+h1{
+  text-align:center;
+}
+
+form{
+  width: 600px;
+  margin: 0 auto;
+}
+
+form input{
+  width: 100%;
+  padding: 16px;
+  font-size: 20px;
+}
+
